@@ -25,7 +25,7 @@ M.capture_cmd = function(cmd)
     cmd = 'messages'
   end
 
-  M.open_float(vim.api.nvim_exec(cmd, true))
+  M.open_float(vim.api.nvim_exec2(cmd, { output = true }).output)
 end
 
 return M
